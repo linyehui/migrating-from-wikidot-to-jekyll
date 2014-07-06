@@ -1,1 +1,4 @@
 wikidot/source
+.idea
+jekyll
+*.pyc
