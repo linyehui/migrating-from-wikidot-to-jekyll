@@ -31,6 +31,7 @@ migrating-from-wikidot-to-jekyll
 * 前提是我得先有数据给他转换，从上面介绍Wikidot直接提供给我们的数据是不够的
 * 我的目的是放到Jekyll上，也就是说我的文件头需要加上Jakyll的配置，这个我还得另外写个脚本来做
 * 需求描述变成了：
+
     ```
     1. 从Wikidot拿到所有文章的索引信息（Title，Url，tags，Date），和backup中的文件关联起来；
     2. 再处理下backup中的文件，加上文件头，把正文从Wiki转成Mardown
@@ -43,6 +44,7 @@ migrating-from-wikidot-to-jekyll
 > http://www.linyehui.com/misc:rss
 
 这个Wikidot页面的源码如下：
+
 ```
 [[module ListPages category="_default" perPage="500" date="@URL" separate="false" prependLine="||~ Page||~ Date created||~ Tags ||"]]
 || %%linked_title%% || %%date%% || %%tags%% ||
@@ -68,13 +70,15 @@ migrating-from-wikidot-to-jekyll
     > http://www.linyehui.com/misc:rss
     
     页面代码如下（点击Edit就能编辑）：
+
     ```
     [[module ListPages category="_default" perPage="500" date="@URL" separate="false" prependLine="||~ Page||~ Date created||~ Tags ||"]]
     || %%linked_title%% || %%date%% || %%tags%% ||
     [[/module]]
     ```
 4. 现在的脚本目录结构如下：
-    ```
+
+    ```shell
     |----wikidot
     |    |-convert.py
     |    |-wikidot.py
