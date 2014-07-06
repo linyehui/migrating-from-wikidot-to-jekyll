@@ -103,11 +103,21 @@ class ConversionController(object):
         md_file.close();
         return None
 
+    def get_rss_context(self, filename):
+        try:
+            f = codecs.open(filename, encoding='utf-8')
+            text = f.read()
+            f.close()
+            return text
+        except:
+            return None
+
     def convert(self):
         self.__prepare_output_dir()
-        f = codecs.open(self.__input_rss_file, encoding='utf-8')
-        text = f.read()
-        f.close()
+        text = self.get_rss_context(self.__input_rss_file)
+        if None == text:
+            print "Failed to open RSS file: ", self.__input_rss_file
+            return None
 
         # read index info from rss
         index_info = self.parse_rss(text)
