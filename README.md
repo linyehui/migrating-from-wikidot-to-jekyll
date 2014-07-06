@@ -74,15 +74,15 @@ migrating-from-wikidot-to-jekyll
     [[/module]]
     ```
 4. 现在的脚本目录结构如下：
-```
-|----wikidot
-|    |-convert.py
-|    |-wikidot.py
-|    |-rss.html
-|    |-source
-|        |- xxxx-xxx1.txt
-|        |- xxxx-xxx2.txt
-```
+    ```
+    |----wikidot
+    |    |-convert.py
+    |    |-wikidot.py
+    |    |-rss.html
+    |    |-source
+    |        |- xxxx-xxx1.txt
+    |        |- xxxx-xxx2.txt
+    ```
 5. 执行convert.py，不带参数会使用默认的目录结构进行执行，执行后你就能再脚本旁边的./jekyll目录下得到你所需要的转换后的.markdown文件们
 6. 把.markdown文件全选，复制到github pages对应git目录下的_post目录，git commit，git push
 7. 迁移工作搞定。
