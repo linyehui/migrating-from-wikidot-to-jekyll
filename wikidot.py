@@ -41,9 +41,15 @@ class WikidotToMarkdown(object):
         # search for any of the simpler replacements in the dictionary regex_replacements
         for s_reg, r_reg in self.regex_replacements.items():
             text = re.sub(re.compile(s_reg,re.MULTILINE),r_reg,text)
+        # search for image of the form [[image https://linyehui.com/test.png]]
+        for link in re.finditer(r"\[\[image ("+self.url_regex+r")\]\]", text):
+            #print link.group(0), "![alt text](%s)" % (link.groups()[-1])
+            text = text.replace(link.group(0),"![%s](%s)" % (link.groups()[-1],link.group(1)),1)
         # search for simple http://www.google.com links:
         for link in re.finditer(r"[\s\S\n ]("+self.url_regex+r")", text):
+            print link.group(0)
             if link.group(0)[0] == "[" : continue
+            elif link.group(0)[0] == "(" : continue
             text = text.replace(link.group(1),"<%s>  " % link.group(1),1)
         # search for links of the form [http://www.google.com Google Website]
         for link in re.finditer(r"\[("+self.url_regex+r") ([^\]]*)\]", text):
