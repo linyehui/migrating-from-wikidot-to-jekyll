@@ -133,7 +133,7 @@ class ConversionController(object):
             item_info = self.parse_index_item(item)
             self.deal_one_file(item_info[0])
 
-        print "End Exit"
+        print "====== Success ====="
 
 def main():
     """ Main function called to start the conversion."""
