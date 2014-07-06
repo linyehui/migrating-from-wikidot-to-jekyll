@@ -19,6 +19,8 @@ class WikidotToMarkdown(object):
         self.regex_replacements = { r'^\+ ([^\n]*)$': r"# \1\n", # headings
                                     r'^\+\+ ([^\n]*)$': r"## \1\n",
                                     r'^\+\+\+ ([^\n]*)$': r"### \1\n",
+                                    r'^\+\+\+\+ ([^\n]*)$': r"#### \1\n",
+                                    r'^\+\+\+\+\+ ([^\n]*)$': r"##### \1\n",
                                     r'([^:])//([\s\S ]*?)//': r'\1*\2*', # italics
                                     r'([^:])__([\s\S ]*?)__': r'\1**\2**', # underlining → bold
                                     r'([^:]){{([\s\S ]*?)}}': r'\1`\2`', # inline monospaced text
