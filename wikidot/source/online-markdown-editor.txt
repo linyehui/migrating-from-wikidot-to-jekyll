@@ -1,0 +1,9 @@
+||~ 产品名称 ||~ 同步到Evernote ||~ 同步到Dropbox ||~ 整体描述 ||~ 链接 ||
+||马克飞象||支持||不支持||目前体验最好的一个，但是服务器不是很稳定，作者说是Evernote的问题，需要再观察下，这也是为什么我会写这篇文章的原因：马克飞象出问题的时候，我需要一个临时的替代品||[http://maxiang.info/ 链接]||
+||stackedit.io||不支持||支持||除了不支持Evernote，其他的功能和马克飞象比起来是最类似的（编辑体验，快捷键等）；支持Dropbox，Google Drive自动同步，但需要自己指定下保存的文件路径；还有个缺点是没有Evernote分享那么强大的功能，只能是先保存成HTML然后再分享HTML文件的链接；整体看stackedit的功能和配置更多，但不支持Evernote确实减分不少，可以作为一个备选方案||[https://stackedit.io/ 链接]||
+||Farbox||不支持||支持||Dropbox+Markdown的可加密Blog系统，还是很好用的，但是不能实时预览，文件名等会自动保存，算数没有实时预览的在线编辑器中最好的一个，可以作为一个备选方案||[http://farbox.com 链接]||
+||Markable||支持||支持||编辑的时候，输入法的体验不好，保存的时候需要自己输入文件名，这个体验很不好||[http://markable.in/ 链接]||
+||小书匠||支持||不支持||编辑的体验还可以，但是保存和同步到Evernote的体验比较差，每次同步都需要自己选择文件名||[http://markdown.xiaoshujiang.com/ 链接]||
+||Sublime + 插件Evernote + 插件Markdown Preview|| 支持 || 支持 || 可以做到双向同步，但是体验上没有实时预览，保存的时候到时可以不用自己写文件名，但是快捷键调用命令行来保存还是稍微麻烦了一点，另外保存下来的文本CSS不好看，需要自己再调整；整体来说这个组合是非常强大的，但是就是需要自己做太多的事情||本地方案||
+||Markdown Here || 可以再Evernote页面中使用 || 不支持 || 比较灵活的一个方案，缺点是不能实时预览（HTML和Markdown可以切换，但需要全选文字，右键-》Markdown Toggle）|| Chrome插件||
+||简书Markdown编辑器 || 不支持 || 不支持 || 这编辑器确实漂亮，要是能同步到Evernote就好了 || [http://jianshu.io/writer 链接]||
